@@ -305,6 +305,13 @@ def writeTab(maf):
             score = i[6:]
         elif len(i) > 1:
             endWords.append(i)
+        try:
+            i = int(i)
+            if int(i) == i:
+                score = str(i).strip()
+                print("Score is"+i)
+        except:
+            pass
 
     outWords = [score]
 
